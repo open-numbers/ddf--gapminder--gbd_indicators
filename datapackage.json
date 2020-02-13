@@ -1,0 +1,14 @@
+{
+    "name": "ddf--gapminder--gbd_indicators",
+    "author": "Gapminder",
+    "description": "subset of GBD indicators, in gapminder namespace",
+    "language": {
+        "name": "English",
+        "id": "en"
+    },
+    "translations": [],
+    "license": "CC-BY-4.0",
+    "title": "subset of GBD indicators, in gapminder namespace",
+    "version": "0.0.1",
+    "resources": []
+}
