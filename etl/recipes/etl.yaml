@@ -1,0 +1,39 @@
+info:
+  id: sg-gbd-dataset
+
+config:
+  external_csv_dir: ../external_csv
+  procedure_dir: ./procedure
+  dictionary_dir: ../translation_dictionaries
+  recipes_dir: ./
+
+include:
+- recipe_gw_common.yaml
+- recipe_gbd_total_deaths.yaml
+- recipe_cancer_gbd_gw_bridge.yaml
+
+cooking:
+    datapoints:
+        - procedure: merge
+          ingredients:
+              - gbd-gw-bridged-final
+              - gbd-total-deaths-datapoints-final
+          result: datapoints-final
+    concepts:
+        - procedure: extract_concepts
+          ingredients:
+              -  datapoints-final
+          result: datapoints-concepts
+        - procedure: merge
+          ingredients:
+              - datapoints-concepts
+              - gw-concepts-geo
+              - gw-concepts-discrete
+          options:
+              deep: true
+          result: concepts-final
+
+serving:
+    - id: datapoints-final
+    - id: gw-entities-geo
+    - id: concepts-final

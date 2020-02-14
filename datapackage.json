@@ -1,14 +1,3637 @@
 {
     "name": "ddf--gapminder--gbd_indicators",
-    "author": "Gapminder",
-    "description": "subset of GBD indicators, in gapminder namespace",
     "language": {
-        "name": "English",
         "id": "en"
     },
+    "title": "ddf--gapminder--gbd_indicators",
+    "description": "",
+    "author": "",
+    "license": "",
+    "id": "sg-gbd-dataset",
     "translations": [],
-    "license": "CC-BY-4.0",
-    "title": "subset of GBD indicators, in gapminder namespace",
-    "version": "0.0.1",
-    "resources": []
+    "created": "2020-02-13T14:14:49.088353+00:00",
+    "resources": [
+        {
+            "name": "ddf--concepts",
+            "path": "ddf--concepts.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "concept"
+                    },
+                    {
+                        "name": "color"
+                    },
+                    {
+                        "name": "concept_type"
+                    },
+                    {
+                        "name": "description"
+                    },
+                    {
+                        "name": "description_long"
+                    },
+                    {
+                        "name": "domain"
+                    },
+                    {
+                        "name": "drill_up"
+                    },
+                    {
+                        "name": "indicator_url"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "name_catalog"
+                    },
+                    {
+                        "name": "name_short"
+                    },
+                    {
+                        "name": "scales"
+                    },
+                    {
+                        "name": "source"
+                    },
+                    {
+                        "name": "source_long"
+                    },
+                    {
+                        "name": "source_url"
+                    },
+                    {
+                        "name": "tags"
+                    },
+                    {
+                        "name": "unit"
+                    }
+                ],
+                "primaryKey": "concept"
+            }
+        },
+        {
+            "name": "ddf--datapoints--breast_cancer_deaths_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--breast_cancer_deaths_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "breast_cancer_deaths_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--breast_cancer_new_cases_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--breast_cancer_new_cases_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "breast_cancer_new_cases_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--breast_cancer_number_of_female_deaths--by--geo--time",
+            "path": "ddf--datapoints--breast_cancer_number_of_female_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "breast_cancer_number_of_female_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--breast_cancer_number_of_new_female_cases--by--geo--time",
+            "path": "ddf--datapoints--breast_cancer_number_of_new_female_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "breast_cancer_number_of_new_female_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--burns_deaths_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--burns_deaths_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "burns_deaths_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--cervical_cancer_deaths_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--cervical_cancer_deaths_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "cervical_cancer_deaths_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--cervical_cancer_new_cases_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--cervical_cancer_new_cases_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "cervical_cancer_new_cases_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--cervical_cancer_number_of_female_deaths--by--geo--time",
+            "path": "ddf--datapoints--cervical_cancer_number_of_female_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "cervical_cancer_number_of_female_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--cervical_cancer_number_of_new_female_cases--by--geo--time",
+            "path": "ddf--datapoints--cervical_cancer_number_of_new_female_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "cervical_cancer_number_of_new_female_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--colonandrectum_cancer_deaths_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--colonandrectum_cancer_deaths_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "colonandrectum_cancer_deaths_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--colonandrectum_cancer_deaths_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--colonandrectum_cancer_deaths_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "colonandrectum_cancer_deaths_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--colonandrectum_cancer_new_cases_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--colonandrectum_cancer_new_cases_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "colonandrectum_cancer_new_cases_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--colonandrectum_cancer_new_cases_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--colonandrectum_cancer_new_cases_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "colonandrectum_cancer_new_cases_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--colonandrectum_cancer_number_of_female_deaths--by--geo--time",
+            "path": "ddf--datapoints--colonandrectum_cancer_number_of_female_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "colonandrectum_cancer_number_of_female_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--colonandrectum_cancer_number_of_male_deaths--by--geo--time",
+            "path": "ddf--datapoints--colonandrectum_cancer_number_of_male_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "colonandrectum_cancer_number_of_male_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--colonandrectum_cancer_number_of_new_female_cases--by--geo--time",
+            "path": "ddf--datapoints--colonandrectum_cancer_number_of_new_female_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "colonandrectum_cancer_number_of_new_female_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--colonandrectum_cancer_number_of_new_male_cases--by--geo--time",
+            "path": "ddf--datapoints--colonandrectum_cancer_number_of_new_male_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "colonandrectum_cancer_number_of_new_male_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--falls_deaths_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--falls_deaths_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "falls_deaths_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--hiv_deaths_in_children_1_59_months_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--hiv_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "hiv_deaths_in_children_1_59_months_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--injury_deaths_in_children_1_59_months_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--injury_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "injury_deaths_in_children_1_59_months_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--liver_cancer_deaths_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--liver_cancer_deaths_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "liver_cancer_deaths_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--liver_cancer_deaths_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--liver_cancer_deaths_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "liver_cancer_deaths_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--liver_cancer_new_cases_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--liver_cancer_new_cases_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "liver_cancer_new_cases_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--liver_cancer_new_cases_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--liver_cancer_new_cases_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "liver_cancer_new_cases_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--liver_cancer_number_of_female_deaths--by--geo--time",
+            "path": "ddf--datapoints--liver_cancer_number_of_female_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "liver_cancer_number_of_female_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--liver_cancer_number_of_male_deaths--by--geo--time",
+            "path": "ddf--datapoints--liver_cancer_number_of_male_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "liver_cancer_number_of_male_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--liver_cancer_number_of_new_female_cases--by--geo--time",
+            "path": "ddf--datapoints--liver_cancer_number_of_new_female_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "liver_cancer_number_of_new_female_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--liver_cancer_number_of_new_male_cases--by--geo--time",
+            "path": "ddf--datapoints--liver_cancer_number_of_new_male_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "liver_cancer_number_of_new_male_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lung_cancer_deaths_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--lung_cancer_deaths_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lung_cancer_deaths_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lung_cancer_deaths_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--lung_cancer_deaths_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lung_cancer_deaths_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lung_cancer_new_cases_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--lung_cancer_new_cases_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lung_cancer_new_cases_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lung_cancer_new_cases_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--lung_cancer_new_cases_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lung_cancer_new_cases_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lung_cancer_number_of_female_deaths--by--geo--time",
+            "path": "ddf--datapoints--lung_cancer_number_of_female_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lung_cancer_number_of_female_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lung_cancer_number_of_male_deaths--by--geo--time",
+            "path": "ddf--datapoints--lung_cancer_number_of_male_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lung_cancer_number_of_male_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lung_cancer_number_of_new_female_cases--by--geo--time",
+            "path": "ddf--datapoints--lung_cancer_number_of_new_female_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lung_cancer_number_of_new_female_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--lung_cancer_number_of_new_male_cases--by--geo--time",
+            "path": "ddf--datapoints--lung_cancer_number_of_new_male_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "lung_cancer_number_of_new_male_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--malaria_deaths_in_children_1_59_months_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--malaria_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "malaria_deaths_in_children_1_59_months_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--measles_deaths_in_children_1_59_months_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--measles_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "measles_deaths_in_children_1_59_months_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--meningitis_deaths_in_children_1_59_months_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--meningitis_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "meningitis_deaths_in_children_1_59_months_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--motorcycle_deaths_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--motorcycle_deaths_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "motorcycle_deaths_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--murder_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--murder_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "murder_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--ncd_deaths_in_children_1_59_months_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--ncd_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "ncd_deaths_in_children_1_59_months_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--poisonings_deaths_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--poisonings_deaths_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "poisonings_deaths_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--prostate_cancer_deaths_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--prostate_cancer_deaths_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "prostate_cancer_deaths_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--prostate_cancer_new_cases_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--prostate_cancer_new_cases_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "prostate_cancer_new_cases_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--prostate_cancer_number_of_male_deaths--by--geo--time",
+            "path": "ddf--datapoints--prostate_cancer_number_of_male_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "prostate_cancer_number_of_male_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--prostate_cancer_number_of_new_male_cases--by--geo--time",
+            "path": "ddf--datapoints--prostate_cancer_number_of_new_male_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "prostate_cancer_number_of_new_male_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--stomach_cancer_deaths_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--stomach_cancer_deaths_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "stomach_cancer_deaths_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--stomach_cancer_deaths_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--stomach_cancer_deaths_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "stomach_cancer_deaths_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--stomach_cancer_new_cases_per_100000_men--by--geo--time",
+            "path": "ddf--datapoints--stomach_cancer_new_cases_per_100000_men--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "stomach_cancer_new_cases_per_100000_men"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--stomach_cancer_new_cases_per_100000_women--by--geo--time",
+            "path": "ddf--datapoints--stomach_cancer_new_cases_per_100000_women--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "stomach_cancer_new_cases_per_100000_women"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--stomach_cancer_number_of_female_deaths--by--geo--time",
+            "path": "ddf--datapoints--stomach_cancer_number_of_female_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "stomach_cancer_number_of_female_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--stomach_cancer_number_of_male_deaths--by--geo--time",
+            "path": "ddf--datapoints--stomach_cancer_number_of_male_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "stomach_cancer_number_of_male_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--stomach_cancer_number_of_new_female_cases--by--geo--time",
+            "path": "ddf--datapoints--stomach_cancer_number_of_new_female_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "stomach_cancer_number_of_new_female_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--stomach_cancer_number_of_new_male_cases--by--geo--time",
+            "path": "ddf--datapoints--stomach_cancer_number_of_new_male_cases--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "stomach_cancer_number_of_new_male_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--suicide_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--suicide_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "suicide_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--geo--country",
+            "path": "ddf--entities--geo--country.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "g77_and_oecd_countries"
+                    },
+                    {
+                        "name": "income_groups"
+                    },
+                    {
+                        "name": "is--country"
+                    },
+                    {
+                        "name": "iso3166_1_alpha2"
+                    },
+                    {
+                        "name": "iso3166_1_alpha3"
+                    },
+                    {
+                        "name": "iso3166_1_numeric"
+                    },
+                    {
+                        "name": "iso3166_2"
+                    },
+                    {
+                        "name": "landlocked"
+                    },
+                    {
+                        "name": "latitude"
+                    },
+                    {
+                        "name": "longitude"
+                    },
+                    {
+                        "name": "main_religion_2008"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "un_state"
+                    },
+                    {
+                        "name": "unicef_region"
+                    },
+                    {
+                        "name": "unicode_region_subtag"
+                    },
+                    {
+                        "name": "world_4region"
+                    },
+                    {
+                        "name": "world_6region"
+                    }
+                ],
+                "primaryKey": "country"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--g77_and_oecd_countries",
+            "path": "ddf--entities--geo--g77_and_oecd_countries.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "g77_and_oecd_countries"
+                    },
+                    {
+                        "name": "is--g77_and_oecd_countries"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "rank"
+                    }
+                ],
+                "primaryKey": "g77_and_oecd_countries"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--global",
+            "path": "ddf--entities--geo--global.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "is--global"
+                    },
+                    {
+                        "name": "latitude"
+                    },
+                    {
+                        "name": "longitude"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "topojson"
+                    },
+                    {
+                        "name": "unicode_region_subtag"
+                    }
+                ],
+                "primaryKey": "global"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--income_groups",
+            "path": "ddf--entities--geo--income_groups.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "income_groups"
+                    },
+                    {
+                        "name": "is--income_groups"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "rank"
+                    }
+                ],
+                "primaryKey": "income_groups"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--landlocked",
+            "path": "ddf--entities--geo--landlocked.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "landlocked"
+                    },
+                    {
+                        "name": "is--landlocked"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "rank"
+                    }
+                ],
+                "primaryKey": "landlocked"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--main_religion_2008",
+            "path": "ddf--entities--geo--main_religion_2008.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "main_religion_2008"
+                    },
+                    {
+                        "name": "is--main_religion_2008"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "rank"
+                    }
+                ],
+                "primaryKey": "main_religion_2008"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--unicef_region",
+            "path": "ddf--entities--geo--unicef_region.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "unicef_region"
+                    },
+                    {
+                        "name": "is--unicef_region"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "unicef_region"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--world_4region",
+            "path": "ddf--entities--geo--world_4region.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "world_4region"
+                    },
+                    {
+                        "name": "color"
+                    },
+                    {
+                        "name": "description"
+                    },
+                    {
+                        "name": "is--world_4region"
+                    },
+                    {
+                        "name": "latitude"
+                    },
+                    {
+                        "name": "longitude"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "name_long"
+                    },
+                    {
+                        "name": "name_short"
+                    },
+                    {
+                        "name": "rank"
+                    },
+                    {
+                        "name": "shape_lores_svg"
+                    }
+                ],
+                "primaryKey": "world_4region"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--world_6region",
+            "path": "ddf--entities--geo--world_6region.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "world_6region"
+                    },
+                    {
+                        "name": "is--world_6region"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "name_long"
+                    },
+                    {
+                        "name": "name_short"
+                    },
+                    {
+                        "name": "rank"
+                    },
+                    {
+                        "name": "shape_lores_svg"
+                    }
+                ],
+                "primaryKey": "world_6region"
+            }
+        },
+        {
+            "name": "ddf--entities--geo",
+            "path": "ddf--entities--geo.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "iso3166_1_alpha2"
+                    },
+                    {
+                        "name": "iso3166_1_alpha3"
+                    },
+                    {
+                        "name": "iso3166_1_numeric"
+                    },
+                    {
+                        "name": "landlocked"
+                    },
+                    {
+                        "name": "latitude"
+                    },
+                    {
+                        "name": "longitude"
+                    },
+                    {
+                        "name": "main_religion_2008"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "un_state"
+                    },
+                    {
+                        "name": "unicode_region_subtag"
+                    },
+                    {
+                        "name": "world_4region"
+                    },
+                    {
+                        "name": "world_6region"
+                    }
+                ],
+                "primaryKey": "geo"
+            }
+        }
+    ],
+    "ddfSchema": {
+        "concepts": [
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "color",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "concept_type",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "description",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "description_long",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "domain",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "drill_up",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "indicator_url",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name_catalog",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name_short",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "scales",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "source",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "source_long",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "source_url",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "tags",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "unit",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            }
+        ],
+        "entities": [
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "color",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "color",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "description",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "description",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "g77_and_oecd_countries",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "g77_and_oecd_countries",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "income_groups",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "income_groups",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "is--country",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--country",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "g77_and_oecd_countries"
+                ],
+                "value": "is--g77_and_oecd_countries",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--g77_and_oecd_countries",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--global",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "is--global",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--income_groups",
+                "resources": [
+                    "ddf--entities--geo--income_groups"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "income_groups"
+                ],
+                "value": "is--income_groups",
+                "resources": [
+                    "ddf--entities--geo--income_groups"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--landlocked",
+                "resources": [
+                    "ddf--entities--geo--landlocked"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "landlocked"
+                ],
+                "value": "is--landlocked",
+                "resources": [
+                    "ddf--entities--geo--landlocked"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--main_religion_2008",
+                "resources": [
+                    "ddf--entities--geo--main_religion_2008"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "main_religion_2008"
+                ],
+                "value": "is--main_religion_2008",
+                "resources": [
+                    "ddf--entities--geo--main_religion_2008"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--unicef_region",
+                "resources": [
+                    "ddf--entities--geo--unicef_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unicef_region"
+                ],
+                "value": "is--unicef_region",
+                "resources": [
+                    "ddf--entities--geo--unicef_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--world_4region",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "is--world_4region",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--world_6region",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "is--world_6region",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "iso3166_1_alpha2",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "iso3166_1_alpha2",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "iso3166_1_alpha3",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "iso3166_1_alpha3",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "iso3166_1_numeric",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "iso3166_1_numeric",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "iso3166_2",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "iso3166_2",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "landlocked",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "landlocked",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "latitude",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "latitude",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country",
+                    "ddf--entities--geo--global",
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "latitude",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "latitude",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "longitude",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "longitude",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country",
+                    "ddf--entities--geo--global",
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "longitude",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "longitude",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "main_religion_2008",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "main_religion_2008",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "g77_and_oecd_countries"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country",
+                    "ddf--entities--geo--g77_and_oecd_countries",
+                    "ddf--entities--geo--global",
+                    "ddf--entities--geo--income_groups",
+                    "ddf--entities--geo--landlocked",
+                    "ddf--entities--geo--main_religion_2008",
+                    "ddf--entities--geo--unicef_region",
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "income_groups"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--income_groups"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "landlocked"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--landlocked"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "main_religion_2008"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--main_religion_2008"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unicef_region"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--unicef_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "name_long",
+                "resources": [
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "name_long",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "name_long",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "name_short",
+                "resources": [
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "name_short",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "name_short",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "g77_and_oecd_countries"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries",
+                    "ddf--entities--geo--income_groups",
+                    "ddf--entities--geo--landlocked",
+                    "ddf--entities--geo--main_religion_2008",
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "income_groups"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--income_groups"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "landlocked"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--landlocked"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "main_religion_2008"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--main_religion_2008"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "shape_lores_svg",
+                "resources": [
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "shape_lores_svg",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "shape_lores_svg",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "topojson",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "topojson",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "un_state",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "un_state",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "unicef_region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "unicef_region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "unicode_region_subtag",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "unicode_region_subtag",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country",
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "unicode_region_subtag",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "world_4region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "world_4region",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "world_6region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "world_6region",
+                "resources": [
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            }
+        ],
+        "datapoints": [
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "breast_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--breast_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "breast_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--breast_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "breast_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--breast_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "breast_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--breast_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "breast_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--breast_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "breast_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--breast_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "breast_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--breast_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "breast_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--breast_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "burns_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--burns_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "burns_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--burns_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "cervical_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--cervical_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "cervical_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--cervical_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "cervical_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--cervical_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "cervical_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--cervical_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "cervical_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--cervical_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "cervical_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--cervical_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "cervical_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--cervical_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "cervical_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--cervical_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "colonandrectum_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--colonandrectum_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "falls_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--falls_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "falls_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--falls_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "hiv_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--hiv_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "hiv_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--hiv_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "injury_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--injury_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "injury_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--injury_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "liver_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "liver_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "liver_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "liver_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "liver_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "liver_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "liver_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "liver_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "liver_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "liver_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "liver_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "liver_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "liver_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "liver_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "liver_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "liver_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--liver_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "lung_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "lung_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "lung_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "lung_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "lung_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "lung_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "lung_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "lung_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "lung_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "lung_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "lung_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "lung_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "lung_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "lung_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "lung_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "lung_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--lung_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "malaria_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--malaria_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "malaria_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--malaria_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "measles_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--measles_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "measles_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--measles_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "meningitis_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--meningitis_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "meningitis_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--meningitis_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "motorcycle_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--motorcycle_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "motorcycle_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--motorcycle_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "murder_total_deaths",
+                "resources": [
+                    "ddf--datapoints--murder_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "murder_total_deaths",
+                "resources": [
+                    "ddf--datapoints--murder_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "ncd_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--ncd_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "ncd_deaths_in_children_1_59_months_total_deaths",
+                "resources": [
+                    "ddf--datapoints--ncd_deaths_in_children_1_59_months_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "poisonings_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--poisonings_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "poisonings_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--poisonings_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "prostate_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--prostate_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "prostate_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--prostate_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "prostate_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--prostate_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "prostate_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--prostate_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "prostate_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--prostate_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "prostate_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--prostate_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "prostate_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--prostate_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "prostate_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--prostate_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "stomach_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "stomach_cancer_deaths_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_deaths_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "stomach_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "stomach_cancer_deaths_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_deaths_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "stomach_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "stomach_cancer_new_cases_per_100000_men",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_new_cases_per_100000_men--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "stomach_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "stomach_cancer_new_cases_per_100000_women",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_new_cases_per_100000_women--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "stomach_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "stomach_cancer_number_of_female_deaths",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_number_of_female_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "stomach_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "stomach_cancer_number_of_male_deaths",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_number_of_male_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "stomach_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "stomach_cancer_number_of_new_female_cases",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "stomach_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "stomach_cancer_number_of_new_male_cases",
+                "resources": [
+                    "ddf--datapoints--stomach_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "suicide_total_deaths",
+                "resources": [
+                    "ddf--datapoints--suicide_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "suicide_total_deaths",
+                "resources": [
+                    "ddf--datapoints--suicide_total_deaths--by--geo--time"
+                ]
+            }
+        ],
+        "synonyms": []
+    }
 }
