@@ -1,25 +1,5 @@
-# subset of GBD indicators, in gapminder namespace
+# ddf--gapminder--gbd_indicators
 
-subset of GBD indicators, in gapminder namespace
+Indicators calculated using IHME GBD dataset
 
-## Indicators
-
-- List of indicators in this repo
-
-## Definition of indicator
-
-
-## Unit of measurement
-
-
-## Versions
-
-
-### Revision history
-
-
-## Data sources summary
-
-
-## Specific information about this indicator
-
+These indicators are part of [Systema Globalis](https://github.com/open-numbers/ddf--gapminder--systema_globalis).
