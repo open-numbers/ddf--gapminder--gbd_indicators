@@ -16,7 +16,8 @@ cooking:
     datapoints:
         - procedure: merge
           ingredients:
-              - gbd-gw-bridged-final
+              # - gbd-gw-bridged-final
+              - cancer-deaths-datapoints-final
               - gbd-total-deaths-datapoints-final
           result: datapoints-final
     concepts:
