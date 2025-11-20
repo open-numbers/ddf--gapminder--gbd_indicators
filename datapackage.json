@@ -7,7 +7,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2025-11-20T02:57:17.352Z",
+    "created": "2025-11-20T06:54:46.107Z",
     "translations": [],
     "resources": [
         {
@@ -839,8 +839,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--drowning_deaths_per_100000_people--by--geo--time",
-            "path": "ddf--datapoints--drowning_deaths_per_100000_people--by--geo--time.csv",
+            "name": "ddf--datapoints--drownings_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--drownings_per_100000_people--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -850,7 +850,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "drowning_deaths_per_100000_people"
+                        "name": "drownings_per_100000_people"
                     }
                 ],
                 "primaryKey": [
@@ -2903,9 +2903,9 @@
                     "country",
                     "time"
                 ],
-                "value": "drowning_deaths_per_100000_people",
+                "value": "drownings_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--drowning_deaths_per_100000_people--by--geo--time"
+                    "ddf--datapoints--drownings_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -3393,9 +3393,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "drowning_deaths_per_100000_people",
+                "value": "drownings_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--drowning_deaths_per_100000_people--by--geo--time"
+                    "ddf--datapoints--drownings_per_100000_people--by--geo--time"
                 ]
             },
             {
