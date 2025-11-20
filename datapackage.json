@@ -7,7 +7,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2025-07-12T02:28:17.654Z",
+    "created": "2025-11-20T02:57:17.352Z",
     "translations": [],
     "resources": [
         {
@@ -482,56 +482,6 @@
             }
         },
         {
-            "name": "ddf--entities--geo",
-            "path": "ddf--entities--geo.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "iso3166_1_alpha2"
-                    },
-                    {
-                        "name": "iso3166_1_alpha3"
-                    },
-                    {
-                        "name": "iso3166_1_numeric"
-                    },
-                    {
-                        "name": "landlocked"
-                    },
-                    {
-                        "name": "latitude"
-                    },
-                    {
-                        "name": "longitude"
-                    },
-                    {
-                        "name": "main_religion_2008"
-                    },
-                    {
-                        "name": "name"
-                    },
-                    {
-                        "name": "un_state"
-                    },
-                    {
-                        "name": "unicode_region_subtag"
-                    },
-                    {
-                        "name": "world_4region"
-                    },
-                    {
-                        "name": "world_6region"
-                    }
-                ],
-                "primaryKey": [
-                    "geo"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--breast_cancer_deaths_per_100000_women--by--geo--time",
             "path": "ddf--datapoints--breast_cancer_deaths_per_100000_women--by--geo--time.csv",
             "schema": {
@@ -889,6 +839,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--drowning_deaths_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--drowning_deaths_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "drowning_deaths_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--falls_deaths_per_100000_people--by--geo--time",
             "path": "ddf--datapoints--falls_deaths_per_100000_people--by--geo--time.csv",
             "schema": {
@@ -901,48 +872,6 @@
                     },
                     {
                         "name": "falls_deaths_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--hiv_deaths_in_children_1_59_months_total_deaths--by--geo--time",
-            "path": "ddf--datapoints--hiv_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "hiv_deaths_in_children_1_59_months_total_deaths"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--injury_deaths_in_children_1_59_months_total_deaths--by--geo--time",
-            "path": "ddf--datapoints--injury_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "injury_deaths_in_children_1_59_months_total_deaths"
                     }
                 ],
                 "primaryKey": [
@@ -1288,69 +1217,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--malaria_deaths_in_children_1_59_months_total_deaths--by--geo--time",
-            "path": "ddf--datapoints--malaria_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "malaria_deaths_in_children_1_59_months_total_deaths"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--measles_deaths_in_children_1_59_months_total_deaths--by--geo--time",
-            "path": "ddf--datapoints--measles_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "measles_deaths_in_children_1_59_months_total_deaths"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--meningitis_deaths_in_children_1_59_months_total_deaths--by--geo--time",
-            "path": "ddf--datapoints--meningitis_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "meningitis_deaths_in_children_1_59_months_total_deaths"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--motorcycle_deaths_per_100000_people--by--geo--time",
             "path": "ddf--datapoints--motorcycle_deaths_per_100000_people--by--geo--time.csv",
             "schema": {
@@ -1363,48 +1229,6 @@
                     },
                     {
                         "name": "motorcycle_deaths_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--murder_total_deaths--by--geo--time",
-            "path": "ddf--datapoints--murder_total_deaths--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "murder_total_deaths"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--ncd_deaths_in_children_1_59_months_total_deaths--by--geo--time",
-            "path": "ddf--datapoints--ncd_deaths_in_children_1_59_months_total_deaths--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "ncd_deaths_in_children_1_59_months_total_deaths"
                     }
                 ],
                 "primaryKey": [
@@ -1678,27 +1502,6 @@
                     },
                     {
                         "name": "stomach_cancer_number_of_new_male_cases"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--suicide_total_deaths--by--geo--time",
-            "path": "ddf--datapoints--suicide_total_deaths--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "suicide_total_deaths"
                     }
                 ],
                 "primaryKey": [
@@ -2268,7 +2071,6 @@
                 ],
                 "value": "iso3166_1_alpha2",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--country"
                 ]
             },
@@ -2278,7 +2080,6 @@
                 ],
                 "value": "iso3166_1_alpha3",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--country"
                 ]
             },
@@ -2288,7 +2089,6 @@
                 ],
                 "value": "iso3166_1_numeric",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--country"
                 ]
             },
@@ -2307,7 +2107,6 @@
                 ],
                 "value": "landlocked",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--country"
                 ]
             },
@@ -2317,7 +2116,6 @@
                 ],
                 "value": "latitude",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--global",
                     "ddf--entities--geo--country"
@@ -2329,7 +2127,6 @@
                 ],
                 "value": "longitude",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--global",
                     "ddf--entities--geo--country"
@@ -2341,7 +2138,6 @@
                 ],
                 "value": "main_religion_2008",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--country"
                 ]
             },
@@ -2351,7 +2147,6 @@
                 ],
                 "value": "name",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--world_6region",
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--west_and_rest",
@@ -2446,7 +2241,6 @@
                 ],
                 "value": "un_state",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--country"
                 ]
             },
@@ -2474,7 +2268,6 @@
                 ],
                 "value": "unicode_region_subtag",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--global",
                     "ddf--entities--geo--country"
                 ]
@@ -2494,7 +2287,6 @@
                 ],
                 "value": "world_4region",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--country"
                 ]
             },
@@ -2504,7 +2296,6 @@
                 ],
                 "value": "world_6region",
                 "resources": [
-                    "ddf--entities--geo",
                     "ddf--entities--geo--country"
                 ]
             },
@@ -3112,29 +2903,19 @@
                     "country",
                     "time"
                 ],
+                "value": "drowning_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--drowning_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "falls_deaths_per_100000_people",
                 "resources": [
                     "ddf--datapoints--falls_deaths_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "hiv_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--hiv_deaths_in_children_1_59_months_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "injury_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--injury_deaths_in_children_1_59_months_total_deaths--by--geo--time"
                 ]
             },
             {
@@ -3302,59 +3083,9 @@
                     "country",
                     "time"
                 ],
-                "value": "malaria_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--malaria_deaths_in_children_1_59_months_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "measles_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--measles_deaths_in_children_1_59_months_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "meningitis_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--meningitis_deaths_in_children_1_59_months_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "motorcycle_deaths_per_100000_people",
                 "resources": [
                     "ddf--datapoints--motorcycle_deaths_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "murder_total_deaths",
-                "resources": [
-                    "ddf--datapoints--murder_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "ncd_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--ncd_deaths_in_children_1_59_months_total_deaths--by--geo--time"
                 ]
             },
             {
@@ -3485,16 +3216,6 @@
                 "value": "stomach_cancer_number_of_new_male_cases",
                 "resources": [
                     "ddf--datapoints--stomach_cancer_number_of_new_male_cases--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "suicide_total_deaths",
-                "resources": [
-                    "ddf--datapoints--suicide_total_deaths--by--geo--time"
                 ]
             },
             {
@@ -3672,29 +3393,19 @@
                     "geo",
                     "time"
                 ],
+                "value": "drowning_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--drowning_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
                 "value": "falls_deaths_per_100000_people",
                 "resources": [
                     "ddf--datapoints--falls_deaths_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "hiv_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--hiv_deaths_in_children_1_59_months_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "injury_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--injury_deaths_in_children_1_59_months_total_deaths--by--geo--time"
                 ]
             },
             {
@@ -3862,59 +3573,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "malaria_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--malaria_deaths_in_children_1_59_months_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "measles_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--measles_deaths_in_children_1_59_months_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "meningitis_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--meningitis_deaths_in_children_1_59_months_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
                 "value": "motorcycle_deaths_per_100000_people",
                 "resources": [
                     "ddf--datapoints--motorcycle_deaths_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "murder_total_deaths",
-                "resources": [
-                    "ddf--datapoints--murder_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "ncd_deaths_in_children_1_59_months_total_deaths",
-                "resources": [
-                    "ddf--datapoints--ncd_deaths_in_children_1_59_months_total_deaths--by--geo--time"
                 ]
             },
             {
@@ -4045,16 +3706,6 @@
                 "value": "stomach_cancer_number_of_new_male_cases",
                 "resources": [
                     "ddf--datapoints--stomach_cancer_number_of_new_male_cases--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "suicide_total_deaths",
-                "resources": [
-                    "ddf--datapoints--suicide_total_deaths--by--geo--time"
                 ]
             }
         ],

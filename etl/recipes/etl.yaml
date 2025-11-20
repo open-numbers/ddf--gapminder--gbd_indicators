@@ -2,39 +2,411 @@ info:
   id: sg-gbd-dataset
 
 config:
-  external_csv_dir: ../external_csv
-  procedure_dir: ./procedure
-  dictionary_dir: ../translation_dictionaries
   recipes_dir: ./
 
 include:
-- recipe_gw_common.yaml
-- recipe_gbd_total_deaths.yaml
-- recipe_cancer_gbd_gw_bridge.yaml
+  - recipe_gw_common.yaml
+
+ingredients:
+  # Source dataset - location entities for translation
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    value: "*"
+    key: location
+    id: gbd-country
+
+  # Breast cancer - female only
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - breast_cancer_deaths_rate_age_standardized
+      - breast_cancer_deaths_number_all_ages
+      - breast_cancer_incidence_rate_age_standardized
+      - breast_cancer_incidence_number_all_ages
+    filter:
+      sex: ["2"] # Female
+    id: gbd-breast-cancer-datapoints
+
+  # Cervical cancer - female only
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - cervical_cancer_deaths_rate_age_standardized
+      - cervical_cancer_deaths_number_all_ages
+      - cervical_cancer_incidence_rate_age_standardized
+      - cervical_cancer_incidence_number_all_ages
+    filter:
+      sex: ["2"] # Female
+    id: gbd-cervical-cancer-datapoints
+
+  # Colon and rectum cancer - both sexes
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - colon_and_rectum_cancer_deaths_rate_age_standardized
+      - colon_and_rectum_cancer_deaths_number_all_ages
+      - colon_and_rectum_cancer_incidence_rate_age_standardized
+      - colon_and_rectum_cancer_incidence_number_all_ages
+    id: gbd-colonrectum-cancer-datapoints
+
+  # Liver cancer - both sexes
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - liver_cancer_deaths_rate_age_standardized
+      - liver_cancer_deaths_number_all_ages
+      - liver_cancer_incidence_rate_age_standardized
+      - liver_cancer_incidence_number_all_ages
+    id: gbd-liver-cancer-datapoints
+
+  # Lung cancer (tracheal, bronchus, and lung) - both sexes
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - tracheal_bronchus_and_lung_cancer_deaths_rate_age_standardized
+      - tracheal_bronchus_and_lung_cancer_deaths_number_all_ages
+      - tracheal_bronchus_and_lung_cancer_incidence_rate_age_standardized
+      - tracheal_bronchus_and_lung_cancer_incidence_number_all_ages
+    id: gbd-lung-cancer-datapoints
+
+  # Stomach cancer - both sexes
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - stomach_cancer_deaths_rate_age_standardized
+      - stomach_cancer_deaths_number_all_ages
+      - stomach_cancer_incidence_rate_age_standardized
+      - stomach_cancer_incidence_number_all_ages
+    id: gbd-stomach-cancer-datapoints
+
+  # Prostate cancer - male only
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - prostate_cancer_deaths_rate_age_standardized
+      - prostate_cancer_deaths_number_all_ages
+      - prostate_cancer_incidence_rate_age_standardized
+      - prostate_cancer_incidence_number_all_ages
+    filter:
+      sex: ["1"] # Male
+    id: gbd-prostate-cancer-datapoints
+
+  # Injury/accident deaths - both sexes
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - fire_heat_and_hot_substances_deaths_rate_age_standardized
+      - motorcyclist_road_injuries_deaths_rate_age_standardized
+      - poisonings_deaths_rate_age_standardized
+      - falls_deaths_rate_age_standardized
+      - drowning_deaths_rate_age_standardized
+    filter:
+      sex: ["3"] # Both
+    id: gbd-injury-datapoints
 
 cooking:
-    datapoints:
-        - procedure: merge
-          ingredients:
-              # - gbd-gw-bridged-final
-              - cancer-deaths-datapoints-final
-              - gbd-total-deaths-datapoints-final
-          result: datapoints-final
-    concepts:
-        - procedure: extract_concepts
-          ingredients:
-              -  datapoints-final
-          result: datapoints-concepts
-        - procedure: merge
-          ingredients:
-              - datapoints-concepts
-              - gw-concepts-geo
-              - gw-concepts-discrete
-          options:
-              deep: true
-          result: concepts-final
+  datapoints:
+    # Translate location names to geo codes
+    - ingredients:
+        - gbd-country
+      result: gbd-country-aligned
+      procedure: translate_column
+      options:
+        target_column: location_new
+        dictionary:
+          base: gm-country-synonym
+          value: geo
+          key: synonym
+        column: name
+
+    # Process breast cancer (female only)
+    - ingredients:
+        - gbd-breast-cancer-datapoints
+      result: gbd-breast-cancer-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          breast_cancer_deaths_rate_age_standardized: breast_cancer_deaths_per_100000_women
+          breast_cancer_deaths_number_all_ages: breast_cancer_number_of_female_deaths
+          breast_cancer_incidence_rate_age_standardized: breast_cancer_new_cases_per_100000_women
+          breast_cancer_incidence_number_all_ages: breast_cancer_number_of_new_female_cases
+
+    # Process cervical cancer (female only)
+    - ingredients:
+        - gbd-cervical-cancer-datapoints
+      result: gbd-cervical-cancer-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          cervical_cancer_deaths_rate_age_standardized: cervical_cancer_deaths_per_100000_women
+          cervical_cancer_deaths_number_all_ages: cervical_cancer_number_of_female_deaths
+          cervical_cancer_incidence_rate_age_standardized: cervical_cancer_new_cases_per_100000_women
+          cervical_cancer_incidence_number_all_ages: cervical_cancer_number_of_new_female_cases
+
+    # Process colon and rectum cancer - filter and flatten for males
+    - ingredients:
+        - gbd-colonrectum-cancer-datapoints
+      result: gbd-colonrectum-cancer-male-filtered
+      procedure: filter
+      options:
+        row:
+          sex: ["1"]
+
+    - ingredients:
+        - gbd-colonrectum-cancer-male-filtered
+      result: gbd-colonrectum-cancer-male-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          colon_and_rectum_cancer_deaths_rate_age_standardized: colonandrectum_cancer_deaths_per_100000_men
+          colon_and_rectum_cancer_deaths_number_all_ages: colonandrectum_cancer_number_of_male_deaths
+          colon_and_rectum_cancer_incidence_rate_age_standardized: colonandrectum_cancer_new_cases_per_100000_men
+          colon_and_rectum_cancer_incidence_number_all_ages: colonandrectum_cancer_number_of_new_male_cases
+
+    # Process colon and rectum cancer - filter and flatten for females
+    - ingredients:
+        - gbd-colonrectum-cancer-datapoints
+      result: gbd-colonrectum-cancer-female-filtered
+      procedure: filter
+      options:
+        row:
+          sex: ["2"]
+
+    - ingredients:
+        - gbd-colonrectum-cancer-female-filtered
+      result: gbd-colonrectum-cancer-female-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          colon_and_rectum_cancer_deaths_rate_age_standardized: colonandrectum_cancer_deaths_per_100000_women
+          colon_and_rectum_cancer_deaths_number_all_ages: colonandrectum_cancer_number_of_female_deaths
+          colon_and_rectum_cancer_incidence_rate_age_standardized: colonandrectum_cancer_new_cases_per_100000_women
+          colon_and_rectum_cancer_incidence_number_all_ages: colonandrectum_cancer_number_of_new_female_cases
+
+    # Process liver cancer - filter and flatten for males
+    - ingredients:
+        - gbd-liver-cancer-datapoints
+      result: gbd-liver-cancer-male-filtered
+      procedure: filter
+      options:
+        row:
+          sex: ["1"]
+
+    - ingredients:
+        - gbd-liver-cancer-male-filtered
+      result: gbd-liver-cancer-male-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          liver_cancer_deaths_rate_age_standardized: liver_cancer_deaths_per_100000_men
+          liver_cancer_deaths_number_all_ages: liver_cancer_number_of_male_deaths
+          liver_cancer_incidence_rate_age_standardized: liver_cancer_new_cases_per_100000_men
+          liver_cancer_incidence_number_all_ages: liver_cancer_number_of_new_male_cases
+
+    # Process liver cancer - filter and flatten for females
+    - ingredients:
+        - gbd-liver-cancer-datapoints
+      result: gbd-liver-cancer-female-filtered
+      procedure: filter
+      options:
+        row:
+          sex: ["2"]
+
+    - ingredients:
+        - gbd-liver-cancer-female-filtered
+      result: gbd-liver-cancer-female-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          liver_cancer_deaths_rate_age_standardized: liver_cancer_deaths_per_100000_women
+          liver_cancer_deaths_number_all_ages: liver_cancer_number_of_female_deaths
+          liver_cancer_incidence_rate_age_standardized: liver_cancer_new_cases_per_100000_women
+          liver_cancer_incidence_number_all_ages: liver_cancer_number_of_new_female_cases
+
+    # Process lung cancer - filter and flatten for males
+    - ingredients:
+        - gbd-lung-cancer-datapoints
+      result: gbd-lung-cancer-male-filtered
+      procedure: filter
+      options:
+        row:
+          sex: ["1"]
+
+    - ingredients:
+        - gbd-lung-cancer-male-filtered
+      result: gbd-lung-cancer-male-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          tracheal_bronchus_and_lung_cancer_deaths_rate_age_standardized: lung_cancer_deaths_per_100000_men
+          tracheal_bronchus_and_lung_cancer_deaths_number_all_ages: lung_cancer_number_of_male_deaths
+          tracheal_bronchus_and_lung_cancer_incidence_rate_age_standardized: lung_cancer_new_cases_per_100000_men
+          tracheal_bronchus_and_lung_cancer_incidence_number_all_ages: lung_cancer_number_of_new_male_cases
+
+    # Process lung cancer - filter and flatten for females
+    - ingredients:
+        - gbd-lung-cancer-datapoints
+      result: gbd-lung-cancer-female-filtered
+      procedure: filter
+      options:
+        row:
+          sex: ["2"]
+
+    - ingredients:
+        - gbd-lung-cancer-female-filtered
+      result: gbd-lung-cancer-female-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          tracheal_bronchus_and_lung_cancer_deaths_rate_age_standardized: lung_cancer_deaths_per_100000_women
+          tracheal_bronchus_and_lung_cancer_deaths_number_all_ages: lung_cancer_number_of_female_deaths
+          tracheal_bronchus_and_lung_cancer_incidence_rate_age_standardized: lung_cancer_new_cases_per_100000_women
+          tracheal_bronchus_and_lung_cancer_incidence_number_all_ages: lung_cancer_number_of_new_female_cases
+
+    # Process stomach cancer - filter and flatten for males
+    - ingredients:
+        - gbd-stomach-cancer-datapoints
+      result: gbd-stomach-cancer-male-filtered
+      procedure: filter
+      options:
+        row:
+          sex: ["1"]
+
+    - ingredients:
+        - gbd-stomach-cancer-male-filtered
+      result: gbd-stomach-cancer-male-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          stomach_cancer_deaths_rate_age_standardized: stomach_cancer_deaths_per_100000_men
+          stomach_cancer_deaths_number_all_ages: stomach_cancer_number_of_male_deaths
+          stomach_cancer_incidence_rate_age_standardized: stomach_cancer_new_cases_per_100000_men
+          stomach_cancer_incidence_number_all_ages: stomach_cancer_number_of_new_male_cases
+
+    # Process stomach cancer - filter and flatten for females
+    - ingredients:
+        - gbd-stomach-cancer-datapoints
+      result: gbd-stomach-cancer-female-filtered
+      procedure: filter
+      options:
+        row:
+          sex: ["2"]
+
+    - ingredients:
+        - gbd-stomach-cancer-female-filtered
+      result: gbd-stomach-cancer-female-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          stomach_cancer_deaths_rate_age_standardized: stomach_cancer_deaths_per_100000_women
+          stomach_cancer_deaths_number_all_ages: stomach_cancer_number_of_female_deaths
+          stomach_cancer_incidence_rate_age_standardized: stomach_cancer_new_cases_per_100000_women
+          stomach_cancer_incidence_number_all_ages: stomach_cancer_number_of_new_female_cases
+
+    # Process prostate cancer (male only)
+    - ingredients:
+        - gbd-prostate-cancer-datapoints
+      result: gbd-prostate-cancer-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          prostate_cancer_deaths_rate_age_standardized: prostate_cancer_deaths_per_100000_men
+          prostate_cancer_deaths_number_all_ages: prostate_cancer_number_of_male_deaths
+          prostate_cancer_incidence_rate_age_standardized: prostate_cancer_new_cases_per_100000_men
+          prostate_cancer_incidence_number_all_ages: prostate_cancer_number_of_new_male_cases
+
+    # Process injury deaths (both sexes)
+    - ingredients:
+        - gbd-injury-datapoints
+      result: gbd-injury-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          fire_heat_and_hot_substances_deaths_rate_age_standardized: burns_deaths_per_100000_people
+          motorcyclist_road_injuries_deaths_rate_age_standardized: motorcycle_deaths_per_100000_people
+          poisonings_deaths_rate_age_standardized: poisonings_deaths_per_100000_people
+          falls_deaths_rate_age_standardized: falls_deaths_per_100000_people
+          drowning_deaths_rate_age_standardized: drowning_deaths_per_100000_people
+
+    # Merge all cancer datapoints
+    - ingredients:
+        - gbd-breast-cancer-flattened
+        - gbd-cervical-cancer-flattened
+        - gbd-colonrectum-cancer-male-flattened
+        - gbd-colonrectum-cancer-female-flattened
+        - gbd-liver-cancer-male-flattened
+        - gbd-liver-cancer-female-flattened
+        - gbd-lung-cancer-male-flattened
+        - gbd-lung-cancer-female-flattened
+        - gbd-stomach-cancer-male-flattened
+        - gbd-stomach-cancer-female-flattened
+        - gbd-prostate-cancer-flattened
+        - gbd-injury-flattened
+      result: gbd-datapoints-merged
+      procedure: merge
+
+    # Translate location to geo codes
+    - ingredients:
+        - gbd-datapoints-merged
+      result: gbd-datapoints-translated
+      procedure: translate_column
+      options:
+        target_column: location
+        dictionary:
+          base: gbd-country-aligned
+          value: location_new
+          key:
+            - location
+        column: location
+
+    # Rename location to geo, year to time
+    - ingredients:
+        - gbd-datapoints-translated
+      result: datapoints-final
+      procedure: translate_header
+      options:
+        dictionary:
+          location: geo
+          year: time
+
+  concepts:
+    - procedure: extract_concepts
+      ingredients:
+        - datapoints-final
+      result: datapoints-concepts
+    - procedure: merge
+      ingredients:
+        - datapoints-concepts
+        - gw-concepts-geo
+        - gw-concepts-discrete
+      options:
+        deep: true
+      result: concepts-final
 
 serving:
-    - id: datapoints-final
-    - id: gw-entities-geo
-    - id: concepts-final
+  - id: datapoints-final
+  - id: gw-entities-geo
+  - id: concepts-final
