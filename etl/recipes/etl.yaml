@@ -95,6 +95,7 @@ ingredients:
     key: location, sex, year
     value:
       - fire_heat_and_hot_substances_deaths_rate_age_standardized
+      - motor_vehicle_road_injuries_deaths_rate_age_standardized
       - motorcyclist_road_injuries_deaths_rate_age_standardized
       - poisonings_deaths_rate_age_standardized
       - falls_deaths_rate_age_standardized
@@ -346,6 +347,7 @@ cooking:
           - sex
         dictionary:
           fire_heat_and_hot_substances_deaths_rate_age_standardized: burns_deaths_per_100000_people
+          motor_vehicle_road_injuries_deaths_rate_age_standardized: car_deaths_per_100000_people
           motorcyclist_road_injuries_deaths_rate_age_standardized: motorcycle_deaths_per_100000_people
           poisonings_deaths_rate_age_standardized: poisonings_deaths_per_100000_people
           falls_deaths_rate_age_standardized: falls_deaths_per_100000_people

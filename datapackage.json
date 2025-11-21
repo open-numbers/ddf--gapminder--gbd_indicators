@@ -7,7 +7,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2025-11-20T06:54:46.107Z",
+    "created": "2025-11-21T01:01:34.921Z",
     "translations": [],
     "resources": [
         {
@@ -578,6 +578,27 @@
                     },
                     {
                         "name": "burns_deaths_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--car_deaths_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--car_deaths_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "car_deaths_per_100000_people"
                     }
                 ],
                 "primaryKey": [
@@ -2783,6 +2804,16 @@
                     "country",
                     "time"
                 ],
+                "value": "car_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--car_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "cervical_cancer_deaths_per_100000_women",
                 "resources": [
                     "ddf--datapoints--cervical_cancer_deaths_per_100000_women--by--geo--time"
@@ -3266,6 +3297,16 @@
                 "value": "burns_deaths_per_100000_people",
                 "resources": [
                     "ddf--datapoints--burns_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "car_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--car_deaths_per_100000_people--by--geo--time"
                 ]
             },
             {
