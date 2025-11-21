@@ -7,7 +7,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2025-11-21T01:01:34.921Z",
+    "created": "2025-11-21T01:39:50.257Z",
     "translations": [],
     "resources": [
         {
@@ -1523,6 +1523,27 @@
                     },
                     {
                         "name": "stomach_cancer_number_of_new_male_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--suicide_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--suicide_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "suicide_total_deaths"
                     }
                 ],
                 "primaryKey": [
@@ -3251,6 +3272,16 @@
             },
             {
                 "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "suicide_total_deaths",
+                "resources": [
+                    "ddf--datapoints--suicide_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
                     "geo",
                     "time"
                 ],
@@ -3747,6 +3778,16 @@
                 "value": "stomach_cancer_number_of_new_male_cases",
                 "resources": [
                     "ddf--datapoints--stomach_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "suicide_total_deaths",
+                "resources": [
+                    "ddf--datapoints--suicide_total_deaths--by--geo--time"
                 ]
             }
         ],

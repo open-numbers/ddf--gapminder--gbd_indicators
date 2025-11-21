@@ -100,6 +100,7 @@ ingredients:
       - poisonings_deaths_rate_age_standardized
       - falls_deaths_rate_age_standardized
       - drowning_deaths_rate_age_standardized
+      - self_harm_deaths_number_all_ages
     filter:
       sex: ["3"] # Both
     id: gbd-injury-datapoints
@@ -352,6 +353,7 @@ cooking:
           poisonings_deaths_rate_age_standardized: poisonings_deaths_per_100000_people
           falls_deaths_rate_age_standardized: falls_deaths_per_100000_people
           drowning_deaths_rate_age_standardized: drownings_per_100000_people
+          self_harm_deaths_number_all_ages: suicide_total_deaths
 
     # Merge all cancer datapoints
     - ingredients:
