@@ -7,7 +7,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2025-11-21T01:39:50.257Z",
+    "created": "2025-12-07T03:49:53.143Z",
     "translations": [],
     "resources": [
         {
@@ -1259,6 +1259,90 @@
             }
         },
         {
+            "name": "ddf--datapoints--murder_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--murder_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "murder_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--murder_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--murder_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "murder_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--murdered_men_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--murdered_men_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "murdered_men_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--murdered_women_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--murdered_women_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "murdered_women_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--poisonings_deaths_per_100000_people--by--geo--time",
             "path": "ddf--datapoints--poisonings_deaths_per_100000_people--by--geo--time.csv",
             "schema": {
@@ -1544,6 +1628,90 @@
                     },
                     {
                         "name": "suicide_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--traffic_deaths_men_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--traffic_deaths_men_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "traffic_deaths_men_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--traffic_deaths_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--traffic_deaths_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "traffic_deaths_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--traffic_deaths_women_per_100000_people--by--geo--time",
+            "path": "ddf--datapoints--traffic_deaths_women_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "traffic_deaths_women_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--traffic_total_deaths--by--geo--time",
+            "path": "ddf--datapoints--traffic_total_deaths--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "traffic_total_deaths"
                     }
                 ],
                 "primaryKey": [
@@ -3145,6 +3313,46 @@
                     "country",
                     "time"
                 ],
+                "value": "murder_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--murder_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "murder_total_deaths",
+                "resources": [
+                    "ddf--datapoints--murder_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "murdered_men_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--murdered_men_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "murdered_women_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--murdered_women_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "poisonings_deaths_per_100000_people",
                 "resources": [
                     "ddf--datapoints--poisonings_deaths_per_100000_people--by--geo--time"
@@ -3278,6 +3486,46 @@
                 "value": "suicide_total_deaths",
                 "resources": [
                     "ddf--datapoints--suicide_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "traffic_deaths_men_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--traffic_deaths_men_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "traffic_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--traffic_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "traffic_deaths_women_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--traffic_deaths_women_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "traffic_total_deaths",
+                "resources": [
+                    "ddf--datapoints--traffic_total_deaths--by--geo--time"
                 ]
             },
             {
@@ -3655,6 +3903,46 @@
                     "geo",
                     "time"
                 ],
+                "value": "murder_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--murder_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "murder_total_deaths",
+                "resources": [
+                    "ddf--datapoints--murder_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "murdered_men_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--murdered_men_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "murdered_women_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--murdered_women_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
                 "value": "poisonings_deaths_per_100000_people",
                 "resources": [
                     "ddf--datapoints--poisonings_deaths_per_100000_people--by--geo--time"
@@ -3788,6 +4076,46 @@
                 "value": "suicide_total_deaths",
                 "resources": [
                     "ddf--datapoints--suicide_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "traffic_deaths_men_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--traffic_deaths_men_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "traffic_deaths_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--traffic_deaths_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "traffic_deaths_women_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--traffic_deaths_women_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "traffic_total_deaths",
+                "resources": [
+                    "ddf--datapoints--traffic_total_deaths--by--geo--time"
                 ]
             }
         ],

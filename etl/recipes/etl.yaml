@@ -105,6 +105,62 @@ ingredients:
       sex: ["3"] # Both
     id: gbd-injury-datapoints
 
+  # Interpersonal violence (murder) - male
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - interpersonal_violence_deaths_rate_age_standardized
+    filter:
+      sex: ["1"] # Male
+    id: gbd-violence-male-datapoints
+
+  # Interpersonal violence (murder) - female
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - interpersonal_violence_deaths_rate_age_standardized
+    filter:
+      sex: ["2"] # Female
+    id: gbd-violence-female-datapoints
+
+  # Interpersonal violence (murder) - both sexes (for rates and total deaths)
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - interpersonal_violence_deaths_rate_age_standardized
+      - interpersonal_violence_deaths_number_all_ages
+    filter:
+      sex: ["3"] # Both
+    id: gbd-violence-both-datapoints
+
+  # Road traffic injuries - male
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - road_injuries_deaths_rate_age_standardized
+    filter:
+      sex: ["1"] # Male
+    id: gbd-traffic-male-datapoints
+
+  # Road traffic injuries - female
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - road_injuries_deaths_rate_age_standardized
+    filter:
+      sex: ["2"] # Female
+    id: gbd-traffic-female-datapoints
+
+  # Road traffic injuries - both sexes (for rates and total deaths)
+  - dataset: open-numbers/ddf--ihme--death_cause_compact
+    key: location, sex, year
+    value:
+      - road_injuries_deaths_rate_age_standardized
+      - road_injuries_deaths_number_all_ages
+    filter:
+      sex: ["3"] # Both
+    id: gbd-traffic-both-datapoints
+
 cooking:
   datapoints:
     # Translate location names to geo codes
@@ -355,6 +411,74 @@ cooking:
           drowning_deaths_rate_age_standardized: drownings_per_100000_people
           self_harm_deaths_number_all_ages: suicide_total_deaths
 
+    # Process interpersonal violence (murder) - male
+    - ingredients:
+        - gbd-violence-male-datapoints
+      result: gbd-violence-male-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          interpersonal_violence_deaths_rate_age_standardized: murdered_men_per_100000_people
+
+    # Process interpersonal violence (murder) - female
+    - ingredients:
+        - gbd-violence-female-datapoints
+      result: gbd-violence-female-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          interpersonal_violence_deaths_rate_age_standardized: murdered_women_per_100000_people
+
+    # Process interpersonal violence (murder) - both sexes
+    - ingredients:
+        - gbd-violence-both-datapoints
+      result: gbd-violence-both-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          interpersonal_violence_deaths_rate_age_standardized: murder_per_100000_people
+          interpersonal_violence_deaths_number_all_ages: murder_total_deaths
+
+    # Process road traffic injuries - male
+    - ingredients:
+        - gbd-traffic-male-datapoints
+      result: gbd-traffic-male-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          road_injuries_deaths_rate_age_standardized: traffic_deaths_men_per_100000_people
+
+    # Process road traffic injuries - female
+    - ingredients:
+        - gbd-traffic-female-datapoints
+      result: gbd-traffic-female-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          road_injuries_deaths_rate_age_standardized: traffic_deaths_women_per_100000_people
+
+    # Process road traffic injuries - both sexes
+    - ingredients:
+        - gbd-traffic-both-datapoints
+      result: gbd-traffic-both-flattened
+      procedure: flatten
+      options:
+        flatten_dimensions:
+          - sex
+        dictionary:
+          road_injuries_deaths_rate_age_standardized: traffic_deaths_per_100000_people
+          road_injuries_deaths_number_all_ages: traffic_total_deaths
+
     # Merge all cancer datapoints
     - ingredients:
         - gbd-breast-cancer-flattened
@@ -369,6 +493,12 @@ cooking:
         - gbd-stomach-cancer-female-flattened
         - gbd-prostate-cancer-flattened
         - gbd-injury-flattened
+        - gbd-violence-male-flattened
+        - gbd-violence-female-flattened
+        - gbd-violence-both-flattened
+        - gbd-traffic-male-flattened
+        - gbd-traffic-female-flattened
+        - gbd-traffic-both-flattened
       result: gbd-datapoints-merged
       procedure: merge
 
